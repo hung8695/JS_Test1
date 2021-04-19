@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1=[6,1,2,5,4,4,5,7,28];
+    document.write(viTriSoHoanHao(arr1));
+    function viTriSoHoanHao(arr){
+    let count=0;
+        for(var i=0;i<arr.length;i++) {
+            if (soHoanHao(arr[i])) {
+                document.write(i + ' ');
+            } else{
+                count++;
+            }
+        }
+        if(count==0){
+            alert("Mang khong co so hoan hao")
+        }
+    }
+    function soHoanHao(num){
+        let sum=0;
+        for(var i=1;i<num;i++){
+            if(num%i==0){
+                sum+=i;
+            }
+        }
+        if(sum==num){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
