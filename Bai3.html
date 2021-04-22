@@ -6,17 +6,15 @@
 </head>
 <body>
 <script>
-    let arr1=[6,1,2,5,4,4,5,7,28];
+    let arr1=[1,2,5,4,4,5,7,8,6,28];
     viTriSoHoanHao(arr1);
     function viTriSoHoanHao(arr){
-    let count=0;
+        let count=0;
         for(var i=0;i<arr.length;i++) {
             if (soHoanHao(arr[i])) {
                 document.write(i+' ');
-            } else{
                 count++;
             }
-
         }
         if(count==0){
             alert("Mang khong co so hoan hao")
