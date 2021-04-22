@@ -27,15 +27,15 @@
 
         let user2 = new Client(2, "Phạm Thị B", 1992, "female");
 
-    let manage = [user1, user2];
+    let customer = [user1, user2];
     function display() {
         let str = '';
-        for (i = 0; i < manage.length; i++) {
+        for (i = 0; i < customer.length; i++) {
             str += '<tr>';
-            str += '<td>' + manage[i].id + '</td>';
-            str += '<td>' + manage[i].name + '</td>';
-            str += '<td>' + manage[i].date + '</td>';
-            str += '<td>' + manage[i].gender + '</td>';
+            str += '<td>' + customer[i].id + '</td>';
+            str += '<td>' + customer[i].name + '</td>';
+            str += '<td>' + customer[i].date + '</td>';
+            str += '<td>' + customer[i].gender + '</td>';
             str += '<td><button onclick="editCLien(' + i + ')">Sửa</button></td>'
             str += '<td><button onclick="deleteClient(' + i + ')">xóa</button></td>'
             str += "</tr>";
@@ -49,21 +49,21 @@
         let date = prompt("nhập date");
         let gender = prompt("nhập gender");
         let user3 = new Client(id, name, date, gender);
-        manage.push(user3);
+        customer.push(user3);
         display();
     }
     function deleteClient(index) {
         let check = confirm("do you want delete a user?");
         if (check) {
-            manage.splice(index, 1);
+            customer.splice(index, 1);
             display()
         }
     }
     function editCLien(index) {
-        manage[index].id = prompt("enter id",manage[index].id);
-        manage[index].name = prompt("enter name",manage[index].name);
-        manage[index].date = prompt("enter date",manage[index].date);
-        manage[index].gender = prompt("enter gender",manage[index].gender);
+        customer[index].id = prompt("enter id",manage[index].id);
+        customer[index].name = prompt("enter name",manage[index].name);
+        customer[index].date = prompt("enter date",manage[index].date);
+        customer[index].gender = prompt("enter gender",manage[index].gender);
         display()
     }
 </script>
